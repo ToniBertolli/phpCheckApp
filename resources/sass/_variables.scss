@@ -1,0 +1,43 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-base: tt_norms, sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$gray: #291D1D;
+$gray-dark: #1E1212;
+$gray-light: #2D2121;
+$gray-lighter: #645C5C;
+
+$green: #1CD200;
+$orange: #FF8900;
+$red: #FF3333;
+$purple: #6734C3;
+
+$green-gradient: #1CF8AA;
+$blue-gradient: #0AE1FA;
+$gradient-bluegreen: 305deg, rgba(28,248,170,1) 0%, rgba(10,225,250,1) 50%;
+
+
+
+$blue: #3490dc;
+$indigo: #6574cd;
+$pink: #f66d9b;
+$yellow: #ffed4a;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+@mixin animate() {
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+@mixin animateslow() {
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
