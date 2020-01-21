@@ -1,3 +1,7 @@
+.hideMouse * {
+    cursor: none !important;
+}
+
 body#dashboard {
     background: $gray;
     color: #FFF;

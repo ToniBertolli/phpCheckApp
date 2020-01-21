@@ -26,7 +26,7 @@
         </div>
         <div class="col-4">
             <div class="widget">
-                <h3>LATEST ERROR</h3>
+                <h3><a href="/latest-errors">LATEST ERROR</a></h3>
                 <v-error-free :error="lastKnownError"></v-error-free>
             </div>
         </div>
@@ -61,5 +61,9 @@
         height: 31vh;
         background: $gray-light;
         box-shadow: 4px 4px 50px 0 rgba(0,0,0,0.55);
+
+        a {
+            color: #fff;
+        }
     }
 </style>

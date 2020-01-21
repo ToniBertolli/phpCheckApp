@@ -60,6 +60,9 @@
         },
         mounted() {
             this.doRequests();
+            setInterval(function () {
+                window.location.reload();
+            }, 8*60*60000)
         },
         methods: {
             /** Init Pusher **/

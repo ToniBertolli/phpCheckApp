@@ -13,8 +13,8 @@ require('./bootstrap');
 require('./mixins');
 require('./event-bus');
 require('vue-apexcharts');
-window.Pusher = require('pusher-js');
 
+window.Pusher = require('pusher-js');
 window.Vue = require('vue');
 
 /**
@@ -29,7 +29,6 @@ const files = require.context('./', true, /\.vue$/i);
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 Vue.component('apexchart', VueApexCharts);
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,3 +39,29 @@ Vue.component('apexchart', VueApexCharts);
 const app = new Vue({
     el: '#app',
 });
+
+
+/**
+ * Hide mouse after inactivity
+ */
+
+let timeout;
+let isHidden = false;
+
+document.addEventListener("mousemove", magicMouse);
+
+function magicMouse() {
+    if (timeout) {
+        clearTimeout(timeout);
+    }
+    timeout = setTimeout(function() {
+        if (!isHidden) {
+            document.querySelector("body").classList.add('hideMouse');
+            isHidden = true;
+        }
+    }, 3000);
+    if (isHidden) {
+        document.querySelector("body").classList.remove('hideMouse');
+        isHidden = false;
+    }
+};

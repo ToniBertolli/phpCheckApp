@@ -78,16 +78,18 @@ class ProcedureService
     }
 
     private function stopOnInterval() {
-        if( !is_null($this->procedure->logs->first()))
+        $log = $this->procedure->logs()->orderByDesc('created_at')->first();
+
+        if( !is_null($log))
         {
             $interval = $this->procedure->interval;
-            $total = Carbon::now()->diffInMinutes($this->procedure->logs->first()->created_at);
-
+            $total = Carbon::now()->diffInMinutes($log->created_at);
+            echo $total . "--";
 
             if($total < $interval) {
                 return true;
             }
-            return false;
         }
+        return false;
     }
 }

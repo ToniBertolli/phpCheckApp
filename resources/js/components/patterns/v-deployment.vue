@@ -72,8 +72,7 @@
 <style lang="scss" scoped>
     .wrapper {
         margin-top: 5px;
-        margin-bottom: 10px;
-        overflow: scroll;
+        overflow: auto;
         height: 100%;
     }
 
@@ -87,9 +86,7 @@
     .avatar {
         position: relative;
         display: inline-block;
-        min-height: 50px;
-        min-width: 50px;
-        margin-right: 1rem;
+        margin-right: 0.75rem;
 
         img {
             display: block;
@@ -100,7 +97,7 @@
         &-image {
             border-radius: 100%;
             overflow: hidden;
-            width: 4rem;
+            width: 3vw;
         }
 
         &-small {
@@ -113,6 +110,7 @@
     }
 
     .description {
+        font-size: 0.76vw;
         flex: 1;
 
         strong {

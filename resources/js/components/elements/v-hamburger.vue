@@ -1,10 +1,12 @@
 <template>
-    <div class="hamburger">
-        <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-        </div>
+    <div class="cnr-hamburger">
+        <div class="hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
 
-        <p class="title"></p>
+            <p class="title"></p>
+        </div>
     </div>
 </template>
 
@@ -15,18 +17,28 @@
 </script>
 
 <style lang="scss" scoped>
+    .cnr-hamburger {
+        position: relative;
+        z-index: 99;
+        &:hover {
+            .hamburger {
+                opacity: 1;
+            }
+        }
+    }
+
     .hamburger {
         width: 5vw;
         height: 5vw;
-        background-color: #fff;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         padding-bottom: 8px;
-        z-index: 99999;
-        pointer-events: auto;
+        background-color: #fff;
+        opacity: 0;
+        @include animate();
 
         .hamburger-box {
             display: inline-block;

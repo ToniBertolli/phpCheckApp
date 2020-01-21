@@ -22,6 +22,7 @@ Route::get('admin/endpoints/{endpoint}', 'Admin\AdminViewsController@endpoint');
 
 Route::get('/', 'FrontDashboardController@index');
 Route::get('/instances/{instance}', 'FrontDashboardController@endpoints');
+Route::get('/latest-errors', 'FrontDashboardController@endpointErrors');
 
 
 //Route::resource('admin/dashboards', 'Admin\DashboardViewsController')->only(['index', 'show', 'edit']);
