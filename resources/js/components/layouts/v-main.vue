@@ -25,10 +25,12 @@
             </div>
         </div>
         <div class="col-4">
-            <div class="widget">
-                <h3><a href="/latest-errors">LATEST ERROR</a></h3>
-                <v-error-free :error="lastKnownError"></v-error-free>
-            </div>
+            <a href="/latest-errors">
+                <div class="widget">
+                    <h3>LATEST ERROR</h3>
+                    <v-error-free :error="lastKnownError"></v-error-free>
+                </div>
+            </a>
         </div>
     </div>
 </template>
@@ -56,14 +58,23 @@
 </script>
 
 <style lang="scss" scoped>
+    a {
+        color: #fff;
+
+        &:hover, &:focus {
+            color: #fff;
+            text-decoration: none;
+
+            h3 {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .widget {
         padding: 2.1vw 2.1vw;
         height: 31vh;
         background: $gray-light;
-        box-shadow: 4px 4px 50px 0 rgba(0,0,0,0.55);
-
-        a {
-            color: #fff;
-        }
+        box-shadow: 4px 4px 50px 0 rgba(0, 0, 0, 0.55);
     }
 </style>

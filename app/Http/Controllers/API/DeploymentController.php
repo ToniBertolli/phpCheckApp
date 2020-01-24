@@ -27,7 +27,10 @@ class DeploymentController extends Controller
         $deployment->invoker = $request->json('invoker.name');
         $deployment->invoker_image = $this->parseAvatarUrl($request->json('invoker.avatar_url'));
         $deployment->committer = $request->json('execution.to_revision.committer.name');
-        $deployment->committer_image = $this->parseAvatarUrl($request->json('execution.to_revision.committer.avatar_url'));
+
+        if ($request->json('execution.to_revision.committer.avatar_url') !== null) {
+            $deployment->committer_image = $this->parseAvatarUrl($request->json('execution.to_revision.committer.avatar_url'));
+        }
 
         $deployment->link = $request->json('execution.html_url');
 

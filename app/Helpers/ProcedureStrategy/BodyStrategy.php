@@ -11,7 +11,6 @@ class BodyStrategy implements IProcedureStrategy
 {
     public function process(Client $client, Procedure $procedure, Log $log)
     {
-//        $log = new Log;
         $resp = $client->request('GET', $procedure->endpoint->url, [
             'headers' => [
                 'x-api-version' => '2',

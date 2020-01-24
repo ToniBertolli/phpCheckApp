@@ -304,14 +304,21 @@
 }
 .cnr-logo img[data-v-090a7456] {
   width: 5vw;
-}.widget[data-v-e67d01fe] {
+}a[data-v-e67d01fe] {
+  color: #fff;
+}
+a[data-v-e67d01fe]:hover, a[data-v-e67d01fe]:focus {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover h3[data-v-e67d01fe], a:focus h3[data-v-e67d01fe] {
+  text-decoration: underline;
+}
+.widget[data-v-e67d01fe] {
   padding: 2.1vw 2.1vw;
   height: 31vh;
   background: #2D2121;
   box-shadow: 4px 4px 50px 0 rgba(0, 0, 0, 0.55);
-}
-.widget a[data-v-e67d01fe] {
-  color: #fff;
 }.wpr-nav[data-v-6bbbb9dc] {
   position: absolute;
   top: 0;

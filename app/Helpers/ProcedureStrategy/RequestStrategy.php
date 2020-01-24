@@ -12,8 +12,6 @@ class RequestStrategy implements IProcedureStrategy
 {
     public function process(Client $client, Procedure $procedure, Log $log)
     {
-//        $log = new Log;
-
         $resp = $client->head($procedure->endpoint->url, [
             'headers' => [
                 'x-api-version' => '2',

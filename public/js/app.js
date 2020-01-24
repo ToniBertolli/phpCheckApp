@@ -3056,6 +3056,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "v-main",
   props: {
@@ -68377,29 +68379,22 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "col-4" }, [
-      _c(
-        "div",
-        { staticClass: "widget" },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("v-error-free", { attrs: { error: _vm.lastKnownError } })
-        ],
-        1
-      )
+      _c("a", { attrs: { href: "/latest-errors" } }, [
+        _c(
+          "div",
+          { staticClass: "widget" },
+          [
+            _c("h3", [_vm._v("LATEST ERROR")]),
+            _vm._v(" "),
+            _c("v-error-free", { attrs: { error: _vm.lastKnownError } })
+          ],
+          1
+        )
+      ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h3", [
-      _c("a", { attrs: { href: "/latest-errors" } }, [_vm._v("LATEST ERROR")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
